@@ -1,0 +1,199 @@
+#app {
+  height: 100%
+}
+
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+/* body {
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+} */
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.cart-button {
+  position: relative;
+  padding: 5px;
+  width: 150px;
+  height: 30px;
+  border: 0;
+  border-radius: 10px;
+  background-color: #4834d4;
+  outline: none;
+  cursor: pointer;
+  color: #fff;
+  transition: .3s ease-in-out;
+  overflow: hidden;
+}
+
+.cart-button:hover {
+  background-color: #35269b;
+}
+
+.cart-button:active {
+  transform: scale(.9);
+}
+
+.cart-button .fa-shopping-cart {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: -10%;
+  /* width: 6rem; */
+  font-size: 2rem;
+  color: white !important;
+  transform: translate(-50%, -50%);
+}
+
+.cart-button .fa-box {
+  position: absolute;
+  z-index: 3;
+  top: -20%;
+  left: 52%;
+  width: 0.8rem;
+  transform: translate(-50%, -50%);
+}
+
+.cart-button span {
+  position: absolute;
+  z-index: 3;
+  left: 50%;
+  top: 50%;
+  font-size: 1.2em;
+  color: #fff;
+  transform: translate(-50%, -50%);
+}
+
+.cart-button span.add-to-cart {
+  opacity: 1;
+}
+
+.cart-button span.added {
+  opacity: 0;
+}
+
+.cart-button.clicked .fa-shopping-cart {
+  animation: cart 1.5s ease-in-out forwards;
+}
+
+.cart-button.clicked .fa-box {
+  animation: box 1.5s ease-in-out forwards;
+}
+
+.cart-button.clicked span.add-to-cart {
+  animation: txt1 1.5s ease-in-out forwards;
+}
+
+.cart-button.clicked span.added {
+  animation: txt2 1.5s ease-in-out forwards;
+}
+
+@keyframes cart {
+  0% {
+    left: -10%;
+  }
+
+  40%,
+  60% {
+    left: 50%;
+  }
+
+  100% {
+    left: 110%;
+  }
+}
+
+@keyframes box {
+
+  0%,
+  40% {
+    top: -20%;
+  }
+
+  60% {
+    top: 40%;
+    left: 52%;
+  }
+
+  100% {
+    top: 40%;
+    left: 112%;
+  }
+}
+
+@keyframes txt1 {
+  0% {
+    opacity: 1;
+  }
+
+  20%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes txt2 {
+
+  0%,
+  80% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+.check {
+  display: inline-block;
+  transform: rotate(45deg);
+  height: var(--height);
+  width: var(--width);
+  border-bottom: var(--borderWidth) solid var(--borderColor);
+  border-right: var(--borderWidth) solid var(--borderColor);
+}
