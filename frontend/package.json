@@ -36,6 +36,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "start": "react-scripts --max_old_space_size=4096 start",
+    "build": "react-scripts --max_old_space_size=4096 build",
     "server": "json-server --watch db.json --port 5000 --middlewares ./range.js",
     "start": "react-scripts start",
     "build": "react-scripts build",
