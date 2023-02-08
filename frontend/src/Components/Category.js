@@ -17,7 +17,7 @@ const Category = () => {
     useEffect(() => {
         var config = {
             method: 'get',
-            url: 'http://localhost:8080/getAllCategory',
+            url: 'https://backend.proteinfarm.in/getAllCategory',
             headers: {}
         };
 
@@ -30,7 +30,7 @@ const Category = () => {
             });
         var config = {
             method: 'get',
-            url: 'http://localhost:8080/getAllFlavour',
+            url: 'https://backend.proteinfarm.in/getAllFlavour',
             headers: {}
         };
 
@@ -43,7 +43,7 @@ const Category = () => {
             });
         var config = {
             method: 'get',
-            url: 'http://localhost:8080/getAllWeight',
+            url: 'https://backend.proteinfarm.in/getAllWeight',
             headers: {}
         };
 

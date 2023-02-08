@@ -13,7 +13,7 @@ const Order = () => {
     useEffect(() => {
         var config = {
             method: 'get',
-            url: 'http://localhost:8080/get/order',
+            url: 'https://backend.proteinfarm.in/get/order',
             headers: {
                 'Authorization': `Bearer ${localStorage?.getItem("userInfo")?.split('"')[3]}`
             }

@@ -32,7 +32,7 @@ const AddressForm = ({ }) => {
             });
             var config = {
                 method: 'post',
-                url: 'http://localhost:8080/create/order',
+                url: 'https://backend.proteinfarm.in/create/order',
                 headers: {
                     'Authorization': `Bearer ${token}`,
                     'Content-Type': 'application/json'

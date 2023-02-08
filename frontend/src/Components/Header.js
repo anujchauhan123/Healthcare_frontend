@@ -36,7 +36,7 @@ const Header = () => {
 
     var config = {
       method: 'get',
-      url: `http://localhost:8080/api/v1//getProductList?keyword=${e.target.value}`,
+      url: `https://backend.proteinfarm.in/api/v1//getProductList?keyword=${e.target.value}`,
     };
 
     axios(config)

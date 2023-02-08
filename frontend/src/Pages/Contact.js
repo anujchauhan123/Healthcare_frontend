@@ -19,7 +19,7 @@ const Contact = () => {
 
         var config = {
             method: 'post',
-            url: 'http://localhost:8080/sendmessage',
+            url: 'https://backend.proteinfarm.in/sendmessage',
             headers: {
                 'Content-Type': 'application/json'
             },

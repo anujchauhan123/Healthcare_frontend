@@ -14,7 +14,7 @@ export default function App() {
     const datafunc = () => {
         var config = {
             method: 'get',
-            url: `http://localhost:8080/get/bannertype/home-carousel`,
+            url: `https://backend.proteinfarm.in/get/bannertype/home-carousel`,
             headers: {
                 'Authorization': `Bearer ${localStorage?.getItem("adminInfo")?.split('"')[3]}`
             }
