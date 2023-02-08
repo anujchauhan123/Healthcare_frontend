@@ -53,11 +53,11 @@ const Header = () => {
 
     <>
       <SideBar open5={open5} handleClose={handleClose} />
-      
+
       <div className="bg-white  border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900  sticky top-0 z-[100] shadow-xl">
         <div className="container flex flex-wrap justify-between items-center mx-auto">
           <Link to="/" className="flex items-center">
-            <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">HEAL<span className='text-purple-600'>TH</span>KART</span>
+                <img className='h-10 w-28' src="https://res.cloudinary.com/valarmorghullis/image/upload/v1674997358/protienfarm_wezs7k.jpg"/>
           </Link>
           <div className="flex">
             <div className="block relative lg:hidden w-48">
@@ -201,13 +201,13 @@ const Header = () => {
               </li>
               <li className=''>
                 <Link to="/cart" c>
-                  <Badge badgeContent={cartItems?.cartItems?.message?.length} color="primary"> 
-                    <a href="#" onMouseEnter={() => { setOpen2(true) }} onMouseLeave={() => { setOpen2(false) }} className="flex py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"><ShoppingCartOutlinedIcon  /></a>
+                  <Badge badgeContent={cartItems?.cartItems?.message?.length} color="primary">
+                    <a href="#" onMouseEnter={() => { setOpen2(true) }} onMouseLeave={() => { setOpen2(false) }} className="flex py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"><ShoppingCartOutlinedIcon /></a>
                     {open2 &&
                       <div className='absolute' onMouseEnter={() => { setOpen2(true) }} onMouseLeave={() => { setOpen2(false) }}>
                         <div id="dropdownDivider" className="relative left-[-100%] z-10 w-80 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600">
                           <ul className="p-4 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDividerButton">
-                              <CartModal/>
+                            <CartModal />
                           </ul>
                         </div>
                       </div>
