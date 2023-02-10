@@ -36,7 +36,7 @@ const Header = () => {
 
     var config = {
       method: 'get',
-      url: `https://backend.proteinfarm.in/api/v1//getProductList?keyword=${e.target.value}`,
+      url: `https://backend.proteinfarm.in/api/v1/getProductList?keyword=${e.target.value}`,
     };
 
     axios(config)
@@ -57,7 +57,7 @@ const Header = () => {
       <div className="bg-white  border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900  sticky top-0 z-[100] shadow-xl">
         <div className="container flex flex-wrap justify-between items-center mx-auto">
           <Link to="/" className="flex items-center">
-                <img className='h-10 w-28' src="https://res.cloudinary.com/valarmorghullis/image/upload/v1674997358/protienfarm_wezs7k.jpg"/>
+            <img className='h-10 w-28' src="https://res.cloudinary.com/valarmorghullis/image/upload/v1674997358/protienfarm_wezs7k.jpg" />
           </Link>
           <div className="flex">
             <div className="block relative lg:hidden w-48">
