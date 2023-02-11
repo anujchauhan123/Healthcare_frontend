@@ -84,7 +84,7 @@ export const user_details = (token) => async (dispatch) => {
                 "Authorization": `BEARER ${token}`
             }
         }
-        const { data } = await axios.get('/user/details', config)
+        const { data } = await axios.get('https://backend.proteinfarm.in/user/details', config)
         if (data) {
             dispatch({ type: USER_DETAILS_SUCCESS, payload: data })
 

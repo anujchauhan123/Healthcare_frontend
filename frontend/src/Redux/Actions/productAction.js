@@ -74,7 +74,7 @@ export const productListIsorichAction = (page) => async (dispatch) => {
 export const productDetailAction = (id) => async (dispatch) => {
     try {
         dispatch({ type: PRODUCT_DETAIL_REQUEST })
-        const { data } = await axios.get(`/get/product/${id}`)
+        const { data } = await axios.get(`https://backend.proteinfarm.in/get/product/${id}`)
         dispatch({ type: PRODUCT_DETAIL_SUCCESS, payload: data })
     }
     catch (err) {

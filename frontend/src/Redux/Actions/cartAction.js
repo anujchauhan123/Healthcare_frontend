@@ -27,7 +27,7 @@ export const addToCart = (product_id, quantity, token) => async (dispatch) => {
                     "Authorization": `Bearer ${token}`
                 }
             }
-            const { data } = await axios.post('/addToCart', { product_id, quantity }, config)
+            const { data } = await axios.post('https://backend.proteinfarm.in/addToCart', { product_id, quantity }, config)
             dispatch({ type: CART_ADD_ITEM, payload: data })
         }
         catch (err) {
@@ -49,7 +49,7 @@ export const getCart = (token) => async (dispatch) => {
             }
         }
 
-        const { data } = await axios.get('/getCart', config)
+        const { data } = await axios.get('https://backend.proteinfarm.in/getCart', config)
         dispatch({ type: CART_ADD_ITEM, payload: data })
     }
     catch (err) {
