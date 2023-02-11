@@ -24,7 +24,7 @@ export const user_login = (phone, password) => async (dispatch) => {
                     "Content-Type": "application/json"
                 }
             }
-            const { data } = await axios.post('https://backend.proteinfarm.in/user/login', { phone, password }, config)
+            const { data } = await axios.post(`${process.env.REACT_APP_HOSTNAME}user/login`, { phone, password }, config)
             if (data.status == 400) {
                 toast.error('Invalid Credentials', {
                     position: "top-right",
@@ -63,7 +63,7 @@ export const user_register = (userName, email, password, phone) => async (dispat
                 "Content-Type": "application/json"
             }
         }
-        const { data } = await axios.post('https://backend.proteinfarm.in/user/register', { userName, email, password, phone }, config)
+        const { data } = await axios.post(`${process.env.REACT_APP_HOSTNAME}user/register`, { userName, email, password, phone }, config)
         dispatch({ type: USER_REGISTER_SUCCESS, payload: data })
         dispatch({ type: USER_LOGIN_SUCCESS, payload: data })
         localStorage.setItem("userInfo", JSON.stringify(data))
@@ -84,7 +84,7 @@ export const user_details = (token) => async (dispatch) => {
                 "Authorization": `BEARER ${token}`
             }
         }
-        const { data } = await axios.get('https://backend.proteinfarm.in/user/details', config)
+        const { data } = await axios.get(`${process.env.REACT_APP_HOSTNAME}user/details`, config)
         if (data) {
             dispatch({ type: USER_DETAILS_SUCCESS, payload: data })
 

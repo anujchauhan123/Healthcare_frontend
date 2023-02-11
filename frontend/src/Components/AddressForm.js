@@ -32,7 +32,7 @@ const AddressForm = ({ }) => {
             });
             var config = {
                 method: 'post',
-                url: 'https://backend.proteinfarm.in/create/order',
+                url: `${process.env.REACT_APP_HOSTNAME}create/order`,
                 headers: {
                     'Authorization': `Bearer ${token}`,
                     'Content-Type': 'application/json'

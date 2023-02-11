@@ -19,7 +19,7 @@ const Contact = () => {
 
         var config = {
             method: 'post',
-            url: 'https://backend.proteinfarm.in/sendmessage',
+            url: `${process.env.REACT_APP_HOSTNAME}sendmessage`,
             headers: {
                 'Content-Type': 'application/json'
             },

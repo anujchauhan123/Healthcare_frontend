@@ -10,7 +10,7 @@ const PaginationTo = ({ category, weight, flavour, sort }) => {
     const dispatch = useDispatch()
     const [cou, setCou] = useState(0)
     useEffect(() => {
-        axios.get(`https://backend.proteinfarm.in/getProductCount?category=${category}&weight=${weight}&flavour=${flavour}`).then((data) => {
+        axios.get(`${process.env.REACT_APP_HOSTNAME}getProductCount?category=${category}&weight=${weight}&flavour=${flavour}`).then((data) => {
             setCou(data?.data?.message)
             const number = data?.data?.message / 10;
             setCount(Math.ceil(number))

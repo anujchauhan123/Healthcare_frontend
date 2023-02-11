@@ -11,7 +11,7 @@ export const address = (data, token) => async (dispatch) => {
             }
         }
 
-        const { datae } = await axios.post('https://backend.proteinfarm.in/address/getPost', data, config)
+        const { datae } = await axios.post(`${process.env.REACT_APP_HOSTNAME}address/getPost`, data, config)
         // dispatch({ type: CART_ADD_ITEM, payload: datae })
     }
     catch (err) {

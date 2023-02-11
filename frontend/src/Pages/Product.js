@@ -29,8 +29,8 @@ const Product = () => {
     }, [])
 
     useEffect(() => async () => {
-        const datae = await axios.get(`/productWeight/${id}`)
-        const datae1 = await axios.get(`/productFlavour/${id}`)
+        const datae = await axios.get(`${process.env.REACT_APP_HOSTNAME}productWeight/${id}`)
+        const datae1 = await axios.get(`${process.env.REACT_APP_HOSTNAME}productFlavour/${id}`)
         function getUniqueListBy(arr, key) {
             return [...new Map(arr.map(item => [item[key], item])).values()]
         }
@@ -75,12 +75,12 @@ const Product = () => {
                     <nav class="flex" aria-label="Breadcrumb" className="w-4/5 mx-auto">
                         <ol class="inline-flex items-center space-x-1 md:space-x-3">
                             <Link to="/">
-                            <li class="inline-flex items-center">
-                                <a href="#" class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-400 dark:hover:text-white">
-                                    <svg aria-hidden="true" class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path></svg>
-                                    Home
-                                </a>
-                            </li>
+                                <li class="inline-flex items-center">
+                                    <a href="#" class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-400 dark:hover:text-white">
+                                        <svg aria-hidden="true" class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path></svg>
+                                        Home
+                                    </a>
+                                </li>
                             </Link>
                             <li>
                                 <div class="flex items-center">
@@ -139,7 +139,7 @@ const Product = () => {
                                     </a>
                                 </span>
                             </div>
-                            <p className="leading-relaxed">{productDetails?.products?.message?.product_desc}</p>
+
                             <div className="">
                                 <h1 className="mb-2 text-lg font-bold">Weight</h1>
                                 <div className="flex gap-4">
@@ -185,15 +185,16 @@ const Product = () => {
                             <div className="flex">
                                 <span className="title-font font-medium text-2xl text-gray-900">₹{productDetails?.products?.message?.product_price}</span>
                                 <span className="title-font font-medium text-xl ml-2 line-through text-gray-500">₹{productDetails?.products?.message?.product_prev_price}</span>
-                              
+
                                 <button onClick={() => { addToCarte(quantity) }} class="text-gray-100 ml-3 bg-blue-700 hover:bg-blue-800 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center">
-                                    <ShoppingCartIcon/>
+                                    <ShoppingCartIcon />
                                     <span>Add To Cart</span>
                                 </button>
                                 <button className="rounded-full w-10 h-10 bg-gray-200 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4">
                                     <FavoriteBorderIcon />
                                 </button>
                             </div>
+                            <p className="leading-relaxed my-5">{productDetails?.products?.message?.product_desc}</p>
                         </div>
                     </div>
                 </div>

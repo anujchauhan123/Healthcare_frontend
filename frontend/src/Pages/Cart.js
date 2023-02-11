@@ -41,7 +41,7 @@ const Cart = () => {
 
         var config = {
             method: 'get',
-            url: `https://backend.proteinfarm.in/removeToCart/${id}`,
+            url: `${process.env.REACT_APP_HOSTNAME}removeToCart/${id}`,
             headers: {
                 'Authorization': `Bearer ${token}`
             }
