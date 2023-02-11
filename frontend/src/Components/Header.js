@@ -36,7 +36,7 @@ const Header = () => {
 
     var config = {
       method: 'get',
-      url: `${process.env.REACT_APP_HOSTNAME}api/v1/getProductList?keyword=${e.target.value}`,
+      url: `${process.env.REACT_APP_HOSTNAME}api/v1/getProductList?keyword=${e.target.value}&page=1&category=ALL&weight=ALL&flavour=ALL&sort=NEWEST`,
     };
 
     axios(config)
