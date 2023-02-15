@@ -76,8 +76,7 @@ const Home = () => {
                                     </div>
                                 </div>
                             </div> */}
-                            <ImageCarousel />
-                            <BrandCarousel />
+                    
                             <div class="w-full p-1 md:p-2">
                                 <div
                                     class="relative overflow-hidden  aspect-video bg-red-400 cursor-pointer rounded-xl relative group"
@@ -148,7 +147,7 @@ const Home = () => {
             <CardCarousel item="PROTIEN" products={protienList} />
             <img src="https://chawkbazar.vercel.app/_next/image?url=%2Fassets%2Fimages%2Fbanner%2Fbanner-7.jpg&w=1920&q=100" />
             <ImageCarousel />
-
+            <BrandCarousel/>
             <Footer />
         </>
     )
