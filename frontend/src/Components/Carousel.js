@@ -21,10 +21,7 @@ export default function App() {
         };
         axios(config)
             .then(function (response) {
-
                 setData(response?.data?.message)
-
-
             })
             .catch(function (error) {
                 console.log(error);
