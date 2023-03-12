@@ -1,5 +1,4 @@
 import Footer from "../Components/Footer";
-import Header from "../Components/Header";
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from "react-redux";
 import { productDetailAction } from "../Redux/Actions/productAction";
@@ -12,6 +11,7 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import axios from "axios";
 import { addToCart } from "../Redux/Actions/cartAction";
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import NavBar from "../Components/Navbar";
 
 const Product = () => {
     const dispatch = useDispatch();
@@ -69,7 +69,7 @@ const Product = () => {
 
     return (
         <>
-            <Header />
+            <NavBar />
             <section className="text-gray-600 body-font overflow-hidden -mt-16">
                 <div className="container px-5 py-24 mx-auto">
                     <nav class="flex" aria-label="Breadcrumb" className="w-4/5 mx-auto">

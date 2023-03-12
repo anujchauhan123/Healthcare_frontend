@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from 'react'
-import { Link, Navigate, NavLink } from 'react-router-dom'
+import React, {  useState } from 'react'
+import { Link } from 'react-router-dom'
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import { Badge } from '@mui/material';
 import { KeyboardArrowDownRounded, PhoneOutlined, SearchOutlined } from '@mui/icons-material';
 import MenuIcon from '@mui/icons-material/Menu';
 import { useDispatch, useSelector } from 'react-redux';
-import { user_details, user_logout } from '../Redux/Actions/userLoginAction';
+import {  user_logout } from '../Redux/Actions/userLoginAction';
 import BottomAppBar from './BottomNavbar';
 import SideBar from './SideBar';
 import axios from 'axios';

@@ -2,11 +2,11 @@ import { Avatar } from "@mui/material";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Footer from "../Components/Footer";
-import Header from "../Components/Header";
 import { user_details } from "../Redux/Actions/userLoginAction";
 import EditIcon from '@mui/icons-material/Edit';
 import { KeyboardArrowDown } from "@mui/icons-material";
 import { useraddress } from "../Redux/Actions/addressAction";
+import NavBar from "../Components/Navbar";
 
 const UserProfile = () => {
     const dispatch = useDispatch();
@@ -28,7 +28,7 @@ const UserProfile = () => {
     
     return (
         <>
-            <Header />
+            <NavBar />
             <div className="bg-neutral-50 -mt-14 py-12">
 
                 <div className="container mx-auto my-12">

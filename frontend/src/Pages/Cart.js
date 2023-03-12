@@ -10,6 +10,7 @@ import { AddShoppingCart } from "@mui/icons-material";
 import LinkIcon from '@mui/icons-material/Link';
 import AddressForm from "../Components/AddressForm";
 import axios from "axios";
+import NavBar from "../Components/Navbar";
 
 const Cart = () => {
     const cartItems = useSelector(state => state.cartItems)
@@ -60,7 +61,7 @@ const Cart = () => {
 
     return (
         <>
-            <Header />
+            <NavBar />
             <div className="bg-neutral-50 py-12">
                 <Stepper step={step} />
 

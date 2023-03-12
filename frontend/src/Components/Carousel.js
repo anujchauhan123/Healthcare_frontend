@@ -3,9 +3,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import "swiper/css/effect-fade";
 
-
-import { Autoplay, Pagination, Navigation } from "swiper";
+import { EffectFade, Autoplay, Pagination, Navigation } from "swiper";
 import axios from "axios";
 
 
@@ -34,55 +34,37 @@ export default function App() {
 
     return (
         <>
-            <div>
-                <Swiper
-                    slidesPerView={1}
-                    spaceBetween={30}
-                    loop={true}
-                    pagination={{
-                        clickable: true,
-                    }}
-                    autoplay={{
-                        delay: 3000,
-                        disableOnInteraction: false,
-                    }}
-                    modules={[Autoplay, Pagination, Navigation]}
-                    className="mySwiper"
-                >
-                    {data.map((item,index) => (
-                        <SwiperSlide key={index}>
-                            <div className="w-full" >
-                                <img style={{ minHeight: "200px" }} src={`${item.banner_url}`} />
-                            </div>
-                        </SwiperSlide>
-                    ))}
+            <div className="bg-gray-100">
+                <div className="max-w-screen-2xl mx-auto rounded-xl py-10">
+                    <div>
+                        <Swiper
+                            slidesPerView={1}
+                            spaceBetween={30}
+                            loop={true}
+                            effect={"fade"}
+                            pagination={{
+                                clickable: true,
+                            }}
+                            autoplay={{
+                                delay: 5000,
+                                disableOnInteraction: false,
+                            }}
+                            modules={[Autoplay, EffectFade, Pagination, Navigation]}
+                            className="mySwiper"
+                        >
 
-                    {/* <SwiperSlide>
-                        <div className="w-full">
-                            <img style={{ minHeight: "200px" }} src="https://img5.hkrtcdn.com/21592/bnr_2159164_o.jpg" />
-                        </div>
-                    </SwiperSlide>
-
-                    <SwiperSlide>
-                        <div className="w-full">
-                            <img style={{ minHeight: "200px" }} src="https://img9.hkrtcdn.com/21592/bnr_2159168_o.jpg" />
-                        </div>
-                    </SwiperSlide>
-
-                    <SwiperSlide>
-                        <div className="w-full">
-                            <img style={{ minHeight: "200px" }} src="https://img3.hkrtcdn.com/21592/bnr_2159132_o.jpg" />
-                        </div>
-                    </SwiperSlide>
-
-                    <SwiperSlide>
-                        <div className="w-full">
-                            <img style={{ minHeight: "200px" }} src="https://img3.hkrtcdn.com/21592/bnr_2159132_o.jpg" />
-                        </div>
-                    </SwiperSlide> */}
-
-                </Swiper>
+                            {data.map((item, index) => (
+                                <SwiperSlide key={index}>
+                                    <div className="w-full" >
+                                        <img style={{ minHeight: "200px" }} src={`${item.banner_url}`} />
+                                    </div>
+                                </SwiperSlide>
+                            ))}
+                        </Swiper>
+                    </div>
+                </div>
             </div>
+
         </>
     );
 }
