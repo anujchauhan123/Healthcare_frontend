@@ -29,7 +29,7 @@ const NavBar = () => {
                                 <span className="sr-only">Protienfarm</span>
                                 <img
                                     className="h-8 w-auto sm:h-10"
-                                    src="https://res.cloudinary.com/valarmorghullis/image/upload/v1674997358/protienfarm_wezs7k.jpg"
+                                    src="https://res.cloudinary.com/valarmorghullis/image/upload/v1678701983/Protein_Farm__logo_page_ybtdtb.jpg"
                                     alt="logo"
                                 />
                             </Link>
@@ -355,11 +355,11 @@ const NavBar = () => {
                         <button
                             type="button"
                             className="
-                     group bg-white rounded-md text-gray-500 inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 pb-8'
+                     group bg-white rounded-md text-gray-500 inline-flex items-center text-base font-medium hover:text-gray-900 pb-8'
                     "
                             onClick={() => (setFlyer(!flyer), setFlyerTwo(false))}
                         >
-                            <span>Solutions</span>
+                            <span>Sort By Category</span>
                             {/*
                 Heroicon name: solid/chevron-down
   
@@ -398,40 +398,32 @@ const NavBar = () => {
                             onMouseLeave={() => setFlyer(false)}
                             className={
                                 flyer
-                                    ? " opacity-100 translate-y-0 transition ease-out duration-200 absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2"
-                                    : " opacity-0 translate-y-1 absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2"
+                                    ? "w-[700px] opacity-100 translate-y-0  transition ease-out duration-200 absolute z-10 -ml-4 mt-3 transform px-2 sm:px-0 lg:ml-0 "
+                                    : "w-full opacity-0 translate-y-1  absolute z-10 -ml-4 mt-3 transform px-2 sm:px-0 lg:ml-0 "
                             }
                         >
                             <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
-                                <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+                                <div className="relative grid grid-cols-3 gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
                                     <a
                                         href="#"
                                         className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
                                     >
                                         {/* Heroicon name: outline/chart-bar */}
-                                        <svg
-                                            className="flex-shrink-0 h-6 w-6 text-indigo-600"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            fill="none"
-                                            viewBox="0 0 24 24"
-                                            stroke="currentColor"
-                                            aria-hidden="true"
-                                        >
-                                            <path
-                                                strokeLinecap="round"
-                                                strokeLinejoin="round"
-                                                strokeWidth={2}
-                                                d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
-                                            />
-                                        </svg>
+                                      
                                         <div className="ml-4">
                                             <p className="text-base font-medium text-gray-900">
-                                                Analytics
+                                                Protiens
                                             </p>
                                             <p className="mt-1 text-sm text-gray-500">
-                                                Get a better understanding of where your traffic is
-                                                coming from.
+                                                Whey Protiens
                                             </p>
+                                            <p className="mt-1 text-sm text-gray-500">
+                                                Whey Protiens Isolate
+                                            </p>
+                                            <p className="mt-1 text-sm text-gray-500">
+                                                Ray Whey Protiens
+                                            </p>
+                                           
                                         </div>
                                     </a>
                                     <a
@@ -439,29 +431,20 @@ const NavBar = () => {
                                         className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
                                     >
                                         {/* Heroicon name: outline/cursor-click */}
-                                        <svg
-                                            className="flex-shrink-0 h-6 w-6 text-indigo-600"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            fill="none"
-                                            viewBox="0 0 24 24"
-                                            stroke="currentColor"
-                                            aria-hidden="true"
-                                        >
-                                            <path
-                                                strokeLinecap="round"
-                                                strokeLinejoin="round"
-                                                strokeWidth={2}
-                                                d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"
-                                            />
-                                        </svg>
                                         <div className="ml-4">
                                             <p className="text-base font-medium text-gray-900">
-                                                Engagement
+                                                Gainers
                                             </p>
                                             <p className="mt-1 text-sm text-gray-500">
-                                                Speak directly to your customers in a more
-                                                meaningful way.
+                                                Mass Gainer
                                             </p>
+                                            <p className="mt-1 text-sm text-gray-500">
+                                                weight Gainer
+                                            </p>
+                                            <p className="mt-1 text-sm text-gray-500">
+                                                Herbal Mass Gainer
+                                            </p>
+                                           
                                         </div>
                                     </a>
                                     <a
@@ -469,27 +452,18 @@ const NavBar = () => {
                                         className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
                                     >
                                         {/* Heroicon name: outline/shield-check */}
-                                        <svg
-                                            className="flex-shrink-0 h-6 w-6 text-indigo-600"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            fill="none"
-                                            viewBox="0 0 24 24"
-                                            stroke="currentColor"
-                                            aria-hidden="true"
-                                        >
-                                            <path
-                                                strokeLinecap="round"
-                                                strokeLinejoin="round"
-                                                strokeWidth={2}
-                                                d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
-                                            />
-                                        </svg>
                                         <div className="ml-4">
                                             <p className="text-base font-medium text-gray-900">
-                                                Security
+                                                Pre/Post Workout
                                             </p>
                                             <p className="mt-1 text-sm text-gray-500">
-                                                Your customers' data will be safe and secure.
+                                                BCAAs
+                                            </p>
+                                            <p className="mt-1 text-sm text-gray-500">
+                                                Creatine
+                                            </p>
+                                            <p className="mt-1 text-sm text-gray-500">
+                                                Beta Alanine
                                             </p>
                                         </div>
                                     </a>
@@ -498,69 +472,36 @@ const NavBar = () => {
                                         className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
                                     >
                                         {/* Heroicon name: outline/view-grid */}
-                                        <svg
-                                            className="flex-shrink-0 h-6 w-6 text-indigo-600"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            fill="none"
-                                            viewBox="0 0 24 24"
-                                            stroke="currentColor"
-                                            aria-hidden="true"
-                                        >
-                                            <path
-                                                strokeLinecap="round"
-                                                strokeLinejoin="round"
-                                                strokeWidth={2}
-                                                d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"
-                                            />
-                                        </svg>
                                         <div className="ml-4">
                                             <p className="text-base font-medium text-gray-900">
-                                                Integrations
+                                                Protiens
                                             </p>
                                             <p className="mt-1 text-sm text-gray-500">
-                                                Connect with third-party tools that you're already
-                                                using.
+                                                
+                                            </p>
+                                            <p className="mt-1 text-sm text-gray-500">
+                                                
+                                            </p>
+                                            <p className="mt-1 text-sm text-gray-500">
+                                                
+                                            </p>
+                                            <p className="mt-1 text-sm text-gray-500">
+                                                
+                                            </p>
+                                            <p className="mt-1 text-sm text-gray-500">
+                                                
                                             </p>
                                         </div>
                                     </a>
-                                    <a
-                                        href="#"
-                                        className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
-                                    >
-                                        {/* Heroicon name: outline/refresh */}
-                                        <svg
-                                            className="flex-shrink-0 h-6 w-6 text-indigo-600"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            fill="none"
-                                            viewBox="0 0 24 24"
-                                            stroke="currentColor"
-                                            aria-hidden="true"
-                                        >
-                                            <path
-                                                strokeLinecap="round"
-                                                strokeLinejoin="round"
-                                                strokeWidth={2}
-                                                d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
-                                            />
-                                        </svg>
-                                        <div className="ml-4">
-                                            <p className="text-base font-medium text-gray-900">
-                                                Automations
-                                            </p>
-                                            <p className="mt-1 text-sm text-gray-500">
-                                                Build strategic funnels that will drive your
-                                                customers to convert
-                                            </p>
-                                        </div>
-                                    </a>
+                                  
                                 </div>
                                 <div className="px-5 py-5 bg-gray-50 space-y-6 sm:flex sm:space-y-0 sm:space-x-10 sm:px-8">
-                                    <div className="flow-root">
+                                    {/* <div className="flow-root">
                                         <a
                                             href="#"
                                             className="-m-3 p-3 flex items-center rounded-md text-base font-medium text-gray-900 hover:bg-gray-100"
                                         >
-                                            {/* Heroicon name: outline/play */}
+                                           
                                             <svg
                                                 className="flex-shrink-0 h-6 w-6 text-gray-400"
                                                 xmlns="http://www.w3.org/2000/svg"
@@ -590,7 +531,6 @@ const NavBar = () => {
                                             href="#"
                                             className="-m-3 p-3 flex items-center rounded-md text-base font-medium text-gray-900 hover:bg-gray-100"
                                         >
-                                            {/* Heroicon name: outline/phone */}
                                             <svg
                                                 className="flex-shrink-0 h-6 w-6 text-gray-400"
                                                 xmlns="http://www.w3.org/2000/svg"
@@ -608,7 +548,7 @@ const NavBar = () => {
                                             </svg>
                                             <span className="ml-3">Contact Sales</span>
                                         </a>
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
                         </div>
@@ -618,14 +558,9 @@ const NavBar = () => {
                         href="#"
                         className="text-base font-medium text-gray-500 hover:text-gray-900"
                     >
-                        Pricing
+                        Product Authentication
                     </a>
-                    <a
-                        href="#"
-                        className="text-base font-medium text-gray-500 hover:text-gray-900"
-                    >
-                        Customer Support
-                    </a>
+                    
 
                     <div className="relative">
                         {/* Item active: "text-gray-900", Item inactive: "text-gray-500" */}
@@ -634,7 +569,7 @@ const NavBar = () => {
                             className="group bg-white rounded-md text-gray-500 inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                             onClick={() => (setFlyerTwo(!flyerTwo), setFlyer(false))}
                         >
-                            <span>More</span>
+                            <span>Brands</span>
                             {/*
                 Heroicon name: solid/chevron-down
   
@@ -672,8 +607,8 @@ const NavBar = () => {
                             onMouseLeave={() => setFlyerTwo(false)}
                             className={
                                 flyerTwo
-                                    ? " opacity-100 translate-y-0 transition ease-out duration-200 absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2"
-                                    : " opacity-0 translate-y-1 absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2"
+                                    ? "opacity-100 translate-y-0 transition ease-out duration-200 absolute z-10 -ml-4 mt-3 transform px-2 sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2"
+                                    : "opacity-0 translate-y-1 absolute z-10 -ml-4 mt-3 transform px-2 sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2"
                             }
                         >
                             <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
@@ -844,6 +779,18 @@ const NavBar = () => {
                             </div>
                         </div>
                     </div>
+                    <a
+                        href="#"
+                        className="text-base font-medium text-gray-500 hover:text-gray-900"
+                    >
+                        Customer Support
+                    </a>
+                    <a
+                        href="#"
+                        className="text-base font-medium text-gray-500 hover:text-gray-900"
+                    >
+                        About Us
+                    </a>
                 </nav>
             </div>
 

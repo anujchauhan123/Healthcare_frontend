@@ -19,31 +19,33 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Contact from './Pages/Contact';
 import Order from './Pages/Order';
+import Verification from './Pages/Verification';
 
 
 function App() {
   const dispatch = useDispatch();
-    useEffect(() => {
-        if (localStorage.getItem("userInfo")) {
-          const token = localStorage.getItem("userInfo").split('"')[3]
-          dispatch(user_details(token))
-          dispatch(getCart(token))
-        }
-      }, [])
+  useEffect(() => {
+    if (localStorage.getItem("userInfo")) {
+      const token = localStorage.getItem("userInfo").split('"')[3]
+      dispatch(user_details(token))
+      dispatch(getCart(token))
+    }
+  }, [])
   return (
     <>
-    <ToastContainer/>
+      <ToastContainer />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home />}/>
-            <Route path="/cart" element={<Cart />}/>
-              <Route path="/product/:id" element={<Product />} />    
-              <Route path="/products/page" element ={<ProductPage/>}/>
-              <Route path="/login" element ={<Login/>}/>
-              <Route path="/register" element ={<Register/>}/>
-              <Route path="/user/:id" element={<UserProfile/>}/>
-              <Route path="/contact" element={<Contact/>}/>
-              <Route path="/myOrder" element={<Order/>}/>
+          <Route path="/" element={<Home />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/product/:id" element={<Product />} />
+          <Route path="/products/page" element={<ProductPage />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/user/:id" element={<UserProfile />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/myOrder" element={<Order />} />
+          <Route path="/verification" element={<Verification />} />
         </Routes>
       </BrowserRouter>
     </>

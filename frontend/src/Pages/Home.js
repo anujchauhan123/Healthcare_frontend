@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import BrandCarousel from '../Components/BrandCarousel';
+import CardCarousel from '../Components/CardCarousel';
 import Carousel from '../Components/Carousel';
 import CarouselCards from '../Components/Carousell';
 import Footer from '../Components/Footer';
@@ -18,6 +19,7 @@ const Home = () => {
         dispatch(productListGainerAction(1));
         dispatch(productListIsorichAction(1));
     }, [])
+    console.log(protienList)
     return (
         <>
 
@@ -25,6 +27,12 @@ const Home = () => {
             <NavBar/>
             <Carousel />
             <CarouselCards item="PROTIEN" products={protienList}/>
+            <CarouselCards item="PROTIEN" products={protienList}/>
+            <CarouselCards item="PROTIEN" products={protienList}/>
+            <CarouselCards item="PROTIEN" products={protienList}/>
+            <CarouselCards item="PROTIEN" products={protienList}/>
+            <CarouselCards item="PROTIEN" products={protienList}/>
+            <CardCarousel/>
 
             <BrandCarousel/>
             <Footer />
