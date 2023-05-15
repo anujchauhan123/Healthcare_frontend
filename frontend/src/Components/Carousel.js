@@ -21,6 +21,7 @@ export default function App() {
         };
         axios(config)
             .then(function (response) {
+                console.log("data@@@@@@@@@@@@@#$$$$$$$$$$$$$$$",response?.data?.message)
                 setData(response?.data?.message)
             })
             .catch(function (error) {

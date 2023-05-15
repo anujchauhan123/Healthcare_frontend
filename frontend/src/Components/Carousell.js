@@ -26,7 +26,9 @@ const CarouselCards = ({products}) => {
             <div className="flex justify-between my-10">
                 <div className="flex">
 
-                    <h1 className='text-3xl'>Protien</h1>
+
+                    <h1 className='text-3xl'>{products?.products?.message?.[0]?.product_category}</h1>
+                    {console.log("products@@@@@@@@@@@",products?.products?.message)}
                 </div>
                 <div className="flex gap-2">
                     <div className="arrow__left border-2 border-gray-500 border-solid hover:text-gray-100 hover:bg-navy hover:border-navy  border-black p-1 rounded-full" onClick={() => slider?.current?.slickPrev()}>

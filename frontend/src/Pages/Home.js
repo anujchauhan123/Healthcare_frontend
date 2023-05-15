@@ -13,13 +13,14 @@ const Home = () => {
     const protienList = useSelector((state) => state.protienList);
     const gainerList = useSelector((state) => state.gainerList);
     const IsoRichList = useSelector((state) => state.isoRichList);
+    const WheyProtein = useSelector((state) => state.WheyProtein);
     const dispatch = useDispatch();
     useEffect(() => {
         dispatch(productListProtienAction(1));
         dispatch(productListGainerAction(1));
         dispatch(productListIsorichAction(1));
     }, [])
-    console.log(protienList)
+    console.log("proteinlistdata#############3ddddddddd",protienList);
     return (
         <>
 
@@ -27,11 +28,14 @@ const Home = () => {
             <NavBar/>
             <Carousel />
             <CarouselCards item="PROTIEN" products={protienList}/>
-            <CarouselCards item="PROTIEN" products={protienList}/>
-            <CarouselCards item="PROTIEN" products={protienList}/>
-            <CarouselCards item="PROTIEN" products={protienList}/>
-            <CarouselCards item="PROTIEN" products={protienList}/>
-            <CarouselCards item="PROTIEN" products={protienList}/>
+            <CarouselCards item="GAINER" products={gainerList}/>
+            <CarouselCards item="ISORICH" products={IsoRichList}/>
+
+            <CarouselCards item="Whey Protein" products={WheyProtein}/>
+
+            
+
+
             <CardCarousel/>
 
             <BrandCarousel/>
