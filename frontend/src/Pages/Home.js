@@ -1,12 +1,13 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import BrandCarousel from '../Components/BrandCarousel';
+import ImageCarousel from '../Components/ImageCarousel';
 import CardCarousel from '../Components/CardCarousel';
 import Carousel from '../Components/Carousel';
 import CarouselCards from '../Components/Carousell';
 import Footer from '../Components/Footer';
 import NavBar from '../Components/Navbar';
-import { productListGainerAction, productListIsorichAction, productListProtienAction } from '../Redux/Actions/productAction';
+import { productListGainerAction, productListIsorichAction, productListWheyProteinAction, productListProtienAction } from '../Redux/Actions/productAction';
 
 
 const Home = () => {
@@ -19,6 +20,9 @@ const Home = () => {
         dispatch(productListProtienAction(1));
         dispatch(productListGainerAction(1));
         dispatch(productListIsorichAction(1));
+        dispatch(productListWheyProteinAction(1));
+
+        
     }, [])
     console.log("proteinlistdata#############3ddddddddd",protienList);
     return (
@@ -28,17 +32,13 @@ const Home = () => {
             <NavBar/>
             <Carousel />
             <CarouselCards item="PROTIEN" products={protienList}/>
-            <CarouselCards item="GAINER" products={gainerList}/>
-            <CarouselCards item="ISORICH" products={IsoRichList}/>
-
-            <CarouselCards item="Whey Protein" products={WheyProtein}/>
-
-            
-
-
             <CardCarousel/>
-
+            <CarouselCards item="GAINER" products={gainerList}/>
+            <ImageCarousel/>
+            
+            <CarouselCards item="WHEYPROTEIN" products={WheyProtein}/>
             <BrandCarousel/>
+            <CarouselCards item="ISORICH" products={IsoRichList}/>            
             <Footer />
         </>
     )

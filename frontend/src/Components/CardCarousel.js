@@ -19,7 +19,7 @@ export default function CardCarousel() {
     const datafunc = () => {
         var config = {
             method: 'get',
-            url: `${process.env.REACT_APP_HOSTNAME}get/bannertype/Home-carousel`,
+            url: `${process.env.REACT_APP_HOSTNAME}get/bannertype/main-carousel`,
             headers: {
                 'Authorization': `Bearer ${localStorage?.getItem("adminInfo")?.split('"')[3]}`
             }

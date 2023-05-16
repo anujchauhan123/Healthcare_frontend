@@ -2,7 +2,7 @@ import { combineReducers, createStore, applyMiddleware } from "redux";
 import { composeWithDevTools } from "redux-devtools-extension";
 import thunk from "redux-thunk";
 import { cartReducers } from "./Reducers/cartReducers";
-import { productDetailReducers, productListGainerReducers, productListIsoRichReducers, productListProtienReducers, productListReducers } from "./Reducers/productReducers";
+import { productDetailReducers, productListGainerReducers, productListIsoRichReducers, productListWheyProteinReducers, productListProtienReducers, productListReducers } from "./Reducers/productReducers";
 import { userDetailsReducers, userLoginReducers, userRegisterReducers } from "./Reducers/userReducers";
 
 const reducer = combineReducers({
@@ -15,6 +15,7 @@ const reducer = combineReducers({
     protienList:productListProtienReducers,
     gainerList:productListGainerReducers,
     isoRichList:productListIsoRichReducers,
+    WheyProtein:productListWheyProteinReducers
 })
 
 const userInfoFromLocalStorage = localStorage.getItem("userInfo") ?
