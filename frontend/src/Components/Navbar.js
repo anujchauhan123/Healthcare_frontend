@@ -411,9 +411,11 @@ const NavBar = () => {
                                         {/* Heroicon name: outline/chart-bar */}
                                       
                                         <div className="ml-4">
+                                        <a href="/products/page">
                                             <p className="text-base font-medium text-gray-900">
                                                 Protiens
                                             </p>
+                                            </a>
                                             <p className="mt-1 text-sm text-gray-500">
                                                 Whey Protiens
                                             </p>
@@ -555,9 +557,10 @@ const NavBar = () => {
                     </div>
 
                     <a
-                        href="#"
+                        href="/verification"
                         className="text-base font-medium text-gray-500 hover:text-gray-900"
                     >
+
                         Product Authentication
                     </a>
                     
@@ -758,7 +761,7 @@ const NavBar = () => {
                                             </li>
                                             <li className="text-base truncate">
                                                 <a
-                                                    href="#"
+                                                    href="/contact"
                                                     className="font-medium text-gray-900 hover:text-gray-700"
                                                 >
                                                     Improve your customer experience
@@ -780,7 +783,7 @@ const NavBar = () => {
                         </div>
                     </div>
                     <a
-                        href="#"
+                        href="/contact"
                         className="text-base font-medium text-gray-500 hover:text-gray-900"
                     >
                         Customer Support

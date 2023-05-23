@@ -5,7 +5,7 @@ import { user_login } from '../Redux/Actions/userLoginAction';
 import { Link, useNavigate } from "react-router-dom";
 import {  PhoneOutlined } from '@mui/icons-material';
 import NavBar from '../Components/Navbar';
-
+import { verifyProduct } from "../Redux/Actions/productAction";
 
 const Verification = () => {
     
@@ -23,7 +23,9 @@ const Verification = () => {
 
     const submithandle=(e)=>{
         e.preventDefault();
-        dispatch(user_login(phone,password))
+        console.log("phone$$$$$$$$$$$$$$$",phone)
+        console.log("password%##############",password)
+        dispatch(verifyProduct(phone,password))
     }
 
      return (
@@ -36,7 +38,7 @@ const Verification = () => {
                 
                         <div className="max-w-screen-lg mx-auto px-4">
                             <div className="px-6 lg:px-20 py-12 lg:py-24 backdrop-blur border-4 rounded-lg">
-                                <form action="#">
+                                <form action="/productverify" method="POST">
                                     <h3 className="mb-10 text-2xl text-white font-bold font-heading">Product Verification Code</h3>
                                     <div className="flex items-center pl-6 mb-3 bg-white rounded-full">
                                         <span className="inline-block pr-3 py-2 border-r border-gray-50">

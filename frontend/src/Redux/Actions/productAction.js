@@ -24,6 +24,25 @@ export const productListAction = (page,category,flavour,weight,sort) => async (d
     }
 }
 
+export const verifyProduct = (phone,password) => async (dispatch) => {
+    try {
+        const config = {
+            headers: {
+                "Content-Type": "application/json"
+            }
+        }
+
+        console.log("phone,password@@@@@@@@@@@@",phone,password)
+        const { data } = await axios.get(`${process.env.REACT_APP_HOSTNAME}verifyProduct?phone=${phone}&password=${password}`,config)
+        console.log("datadatadatadatadata@@@@@@@@@@",data)
+        // dispatch({ type: PRODUCT_LIST_SUCCESS, payload: data })
+    }
+    catch (err) {
+        dispatch({ type: PRODUCT_LIST_FAIL, payload: err.response && err.response.data.message ? err.response.data.message : err.message })
+    }
+}
+
+
 export const productListProtienAction = (page) => async (dispatch) => {
     try {
         const config = {
