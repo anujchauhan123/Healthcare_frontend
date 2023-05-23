@@ -33,7 +33,7 @@ export const verifyProduct = (phone,password) => async (dispatch) => {
         }
 
         console.log("phone,password@@@@@@@@@@@@",phone,password)
-        const { data } = await axios.get(`${process.env.REACT_APP_HOSTNAME}verifyProduct?phone=${phone}&password=${password}`,config)
+        const { data } = await axios.get(`${process.env.REACT_APP_HOSTNAME}verifyProduct/${password}`,config)
         console.log("datadatadatadatadata@@@@@@@@@@",data)
         // dispatch({ type: PRODUCT_LIST_SUCCESS, payload: data })
     }
