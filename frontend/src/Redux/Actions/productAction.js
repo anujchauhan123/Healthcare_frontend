@@ -6,6 +6,7 @@ import { PRODUCT_LIST_FAIL, PRODUCT_LIST_SUCCESS, PRODUCT_LIST_REQUEST,
     PRODUCT_LIST_WHEYPROTEIN_FAIL, PRODUCT_LIST_WHEYPROTEIN_SUCCESS, PRODUCT_LIST_WHEYPROTEIN_REQUEST
  } from "../contants"
 import axios from "axios";
+import Swal from "sweetalert2";
 
 export const productListAction = (page,category,flavour,weight,sort) => async (dispatch) => {
     try {
@@ -35,6 +36,24 @@ export const verifyProduct = (phone,password) => async (dispatch) => {
         console.log("phone,password@@@@@@@@@@@@",phone,password)
         const { data } = await axios.get(`${process.env.REACT_APP_HOSTNAME}verifyProduct/${password}`,config)
         console.log("datadatadatadatadata@@@@@@@@@@",data)
+        if (data.message.length > 0){
+            Swal.fire({
+            title: "Verified",
+            text: "Your Product is Verified and Genuine!\
+            Show PRF50 to get 50 rupees more discount on your next purchase.",
+            icon: "success",
+            confirmButtonText: "OK",
+          });
+        }
+
+        else{
+            Swal.fire({
+            title: "Not Verified",
+            text: "Your Product is Not Verified! Kindly share your product code on Contact-us page.",
+            icon: "error",
+            confirmButtonText: "Verify Again",
+          });
+        }
         // dispatch({ type: PRODUCT_LIST_SUCCESS, payload: data })
     }
     catch (err) {

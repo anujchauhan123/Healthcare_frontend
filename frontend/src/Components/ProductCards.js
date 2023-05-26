@@ -23,7 +23,7 @@ const ProductCard = ({ product }) => {
 
         <>
 
-            <div className="w-11/12 h-[25rem] max-w-sm bg-white hover:shadow-2xl rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700 my-2 border-slate-200 border-[1px]">
+            <div className="w-11/12 h-[25rem] max-w-sm bg-white hover:shadow-2xl rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700 my-2 border-slate-200 border-[1px]" style={{height: 461}}>
                 <a href={`/product/${product?.product_slug}`} >
                     <div className="flex flex-end  relative top-4 mx-2">
 
