@@ -5,7 +5,7 @@ import Footer from "../Components/Footer";
 import moment from "moment";
 import TrackOrder from "../Components/TrackOrder";
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
-import NavBar from "../Components/Navbar";
+import Header from "../Components/Header";
 const Order = () => {
     const [data, setData] = useState([])
     const [open, setOpen] = useState(false)
@@ -28,7 +28,7 @@ const Order = () => {
 
     return (
         <>
-            <NavBar />
+            <Header />
             {data?.map((data1) => (
                 <>
 

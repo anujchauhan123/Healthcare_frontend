@@ -399,7 +399,7 @@ const NavBar = () => {
                             className={
                                 flyer
                                     ? "w-[700px] opacity-100 translate-y-0  transition ease-out duration-200 absolute z-10 -ml-4 mt-3 transform px-2 sm:px-0 lg:ml-0 "
-                                    : "w-full opacity-0 translate-y-1  absolute z-10 -ml-4 mt-3 transform px-2 sm:px-0 lg:ml-0 "
+                                    : "w-full opacity-0 hidden translate-y-1  absolute z-10 -ml-4 mt-3 transform px-2 sm:px-0 lg:ml-0 display-none"
                             }
                         >
                             <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
@@ -412,19 +412,28 @@ const NavBar = () => {
                                       
                                         <div className="ml-4">
                                         <a href="/products/page">
-                                            <p className="text-base font-medium text-gray-900">
-                                                Protiens
+                                            <p  style={{margin: 17}}  className="text-base font-medium text-gray-900">
+                                                Protein
                                             </p>
                                             </a>
-                                            <p className="mt-1 text-sm text-gray-500">
-                                                Whey Protiens
+
+                                            <Link to="/products/page/protein">
+                                            <p style={{margin: 17}} className="mt-1 text-sm text-gray-500">
+                                                ISO Whey Protien Concentrate
                                             </p>
-                                            <p className="mt-1 text-sm text-gray-500">
+                                            </Link>
+
+                                            <Link to="/products/page/protein">
+                                            <p  style={{margin: 17}}  className="mt-1 text-sm text-gray-500">
                                                 Whey Protiens Isolate
                                             </p>
-                                            <p className="mt-1 text-sm text-gray-500">
-                                                Ray Whey Protiens
+                                            </Link>
+
+                                            <Link to="/products/page/protein">
+                                            <p  style={{margin: 17}}  className="mt-1 text-sm text-gray-500">
+                                                Hydrolised Whey Protiens
                                             </p>
+                                            </Link>
                                            
                                         </div>
                                     </a>
@@ -434,18 +443,22 @@ const NavBar = () => {
                                     >
                                         {/* Heroicon name: outline/cursor-click */}
                                         <div className="ml-4">
-                                            <p className="text-base font-medium text-gray-900">
+                                            <p  style={{margin: 17}}  className="text-base font-medium text-gray-900">
                                                 Gainers
                                             </p>
-                                            <p className="mt-1 text-sm text-gray-500">
+
+                                            <Link to="/products/page/gainer">
+                                            
+                                            <p  style={{margin: 17}}  className="mt-1 text-sm text-gray-500">
                                                 Mass Gainer
                                             </p>
-                                            <p className="mt-1 text-sm text-gray-500">
+                                            </Link>
+
+                                            <Link to="/products/page/gainer">
+                                            <p  style={{margin: 17}}  className="mt-1 text-sm text-gray-500">
                                                 weight Gainer
                                             </p>
-                                            <p className="mt-1 text-sm text-gray-500">
-                                                Herbal Mass Gainer
-                                            </p>
+                                            </Link>
                                            
                                         </div>
                                     </a>
@@ -455,47 +468,24 @@ const NavBar = () => {
                                     >
                                         {/* Heroicon name: outline/shield-check */}
                                         <div className="ml-4">
-                                            <p className="text-base font-medium text-gray-900">
+                                            <p  style={{margin: 17}}  className="text-base font-medium text-gray-900">
                                                 Pre/Post Workout
                                             </p>
-                                            <p className="mt-1 text-sm text-gray-500">
-                                                BCAAs
+                                            <Link to="/products/page/pre-postworkout">
+                                            <p  style={{margin: 17}}  className="mt-1 text-sm text-gray-500">
+                                                BCAAs / EAA
                                             </p>
-                                            <p className="mt-1 text-sm text-gray-500">
-                                                Creatine
+                                            </Link>
+
+                                            <Link to="/products/page/pre-postworkout">
+                                            <p  style={{margin: 17}}  className="mt-1 text-sm text-gray-500">
+                                                Vitamins & Minerals
                                             </p>
-                                            <p className="mt-1 text-sm text-gray-500">
-                                                Beta Alanine
-                                            </p>
+
+                                            </Link>
                                         </div>
                                     </a>
-                                    <a
-                                        href="#"
-                                        className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
-                                    >
-                                        {/* Heroicon name: outline/view-grid */}
-                                        <div className="ml-4">
-                                            <p className="text-base font-medium text-gray-900">
-                                                Protiens
-                                            </p>
-                                            <p className="mt-1 text-sm text-gray-500">
-                                                
-                                            </p>
-                                            <p className="mt-1 text-sm text-gray-500">
-                                                
-                                            </p>
-                                            <p className="mt-1 text-sm text-gray-500">
-                                                
-                                            </p>
-                                            <p className="mt-1 text-sm text-gray-500">
-                                                
-                                            </p>
-                                            <p className="mt-1 text-sm text-gray-500">
-                                                
-                                            </p>
-                                        </div>
-                                    </a>
-                                  
+                                    
                                 </div>
                                 <div className="px-5 py-5 bg-gray-50 space-y-6 sm:flex sm:space-y-0 sm:space-x-10 sm:px-8">
                                     {/* <div className="flow-root">

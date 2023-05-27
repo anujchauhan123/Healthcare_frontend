@@ -97,8 +97,10 @@ const Register = () => {
             });
         }
         else{
-            setOtpSend(true)
-            requestOtp();
+            // setOtpSend(true)
+            // requestOtp();
+
+            dispatch(user_register(username, email, password, number))  
         }
     }
 

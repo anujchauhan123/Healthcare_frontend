@@ -70,8 +70,7 @@ const Footer = () => {
                                     />
                                 </a>
                                 <p class="text-body-color mb-7 text-base">
-                                    Sed ut perspiciatis undmnis is iste natus error sit amet voluptatem
-                                    totam rem aperiam.
+                                    Whey Protein, Mass Gainer & Mass Gainers Manufacturer from Noida, Uttar Pradesh, India.
                                 </p>
                                 <p class="text-dark flex items-center text-sm font-medium">
                                     <span class="text-primary mr-3">
@@ -92,7 +91,7 @@ const Footer = () => {
                                             />
                                         </svg>
                                     </span>
-                                    <span>+91 </span>
+                                    <span>+91 9711828221</span>
                                 </p>
                             </div>
                         </div>
@@ -102,7 +101,7 @@ const Footer = () => {
                                 <ul>
                                     <li>
                                         <a
-                                            href="javascript:void(0)"
+                                            href="/products/page/protein"
                                             class="text-body-color hover:text-primary mb-2 inline-block text-base leading-loose"
                                         >
                                             Protien
@@ -110,7 +109,7 @@ const Footer = () => {
                                     </li>
                                     <li>
                                         <a
-                                            href="javascript:void(0)"
+                                            href="/products/page/gainer"
                                             class="text-body-color hover:text-primary mb-2 inline-block text-base leading-loose"
                                         >
                                            Gainer
@@ -118,12 +117,13 @@ const Footer = () => {
                                     </li>
                                     <li>
                                         <a
-                                            href="javascript:void(0)"
-                                            class="text-body-color hover:text-primary mb-2 inline-block text-base leading-loose"
+                                            href="/products/page/pre-postworkout"
+                                            
                                         >
-                                            BCAA
+                                            Pre/Post Workout
                                         </a>
                                     </li>
+
 
                                 </ul>
                             </div>
@@ -134,7 +134,7 @@ const Footer = () => {
                                 <ul>
                                     <li>
                                         <a
-                                            href="javascript:void(0)"
+                                            href="/about-us"
                                             class="text-body-color hover:text-primary mb-2 inline-block text-base leading-loose"
                                         >
                                             About Us
@@ -142,7 +142,7 @@ const Footer = () => {
                                     </li>
                                     <li>
                                         <a
-                                            href="javascript:void(0)"
+                                            href="/contact"
                                             class="text-body-color hover:text-primary mb-2 inline-block text-base leading-loose"
                                         >
                                             Contact Us
@@ -151,7 +151,7 @@ const Footer = () => {
 
                                     <li>
                                         <a
-                                            href="javascript:void(0)"
+                                            href="/privacy"
                                             class="text-body-color hover:text-primary mb-2 inline-block text-base leading-loose"
                                         >
                                             Privacy and Policy
@@ -166,7 +166,7 @@ const Footer = () => {
                                 <ul>
                                     <li>
                                         <a
-                                            href="javascript:void(0)"
+                                            href="/contact"
                                             class="text-body-color hover:text-primary mb-2 inline-block text-base leading-loose"
                                         >
                                             Premium Support
@@ -174,15 +174,15 @@ const Footer = () => {
                                     </li>
                                     <li>
                                         <a
-                                            href="javascript:void(0)"
+                                            href="/products/page"
                                             class="text-body-color hover:text-primary mb-2 inline-block text-base leading-loose"
                                         >
-                                            Our Services
+                                            Our Products
                                         </a>
                                     </li>
                                     <li>
                                         <Link to=""
-                                            href="javascript:void(0)"
+                                            href="/"
                                             class="text-body-color hover:text-primary mb-2 inline-block text-base leading-loose"
                                         >
                                             Teams

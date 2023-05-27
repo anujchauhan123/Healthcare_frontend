@@ -4,6 +4,13 @@ import BrandCarousel from '../Components/BrandCarousel';
 import ImageCarousel from '../Components/ImageCarousel';
 import CardCarousel from '../Components/CardCarousel';
 import Carousel from '../Components/Carousel';
+import MiddleCarousel from '../Components/MiddleCarousel';
+import BottomCarousel from '../Components/BottomCarousel';
+
+import Header from '../Components/Header';
+
+
+
 import CarouselCards from '../Components/Carousell';
 import Footer from '../Components/Footer';
 import NavBar from '../Components/Navbar';
@@ -28,17 +35,20 @@ const Home = () => {
     return (
         <>
 
-            {/* <Header /> */}
-            <NavBar/>
+            {/* <NavBar/> */}
+            <Header />
             <Carousel />
             <CarouselCards item="PROTIEN" products={protienList}/>
             <CardCarousel/>
             <CarouselCards item="GAINER" products={gainerList}/>
             <ImageCarousel/>
+
+            <MiddleCarousel/>
             
             <CarouselCards item="WHEYPROTEIN" products={WheyProtein}/>
             <BrandCarousel/>
-            <CarouselCards item="ISORICH" products={IsoRichList}/>            
+            <CarouselCards item="ISORICH" products={IsoRichList}/>
+            <BottomCarousel/>            
             <Footer />
         </>
     )

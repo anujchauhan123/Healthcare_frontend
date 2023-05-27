@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import Footer from "../Components/Footer";
-import Header from "../Components/Header";
 import Stepper from "../Components/Stepper";
 import { addToCart, getCart } from "../Redux/Actions/cartAction";
 import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
@@ -10,7 +9,7 @@ import { AddShoppingCart } from "@mui/icons-material";
 import LinkIcon from '@mui/icons-material/Link';
 import AddressForm from "../Components/AddressForm";
 import axios from "axios";
-import NavBar from "../Components/Navbar";
+import Header from "../Components/Header";
 
 const Cart = () => {
     const cartItems = useSelector(state => state.cartItems)
@@ -26,12 +25,12 @@ const Cart = () => {
     }, [])
     useEffect(() => {
         setDatae(0);
-        const data = document?.getElementsByClassName('data123');
+        const data = document?.getElementsByClassName('data12345');
         for (var i = 0; i < data.length; i++) {
-            setDatae(datae + data[i].innerHTML);
+            setDatae(datae + Number(data[i].innerHTML));
         }
-
-        setDatae(datae + 50)
+        console.log("datae@@@@@@@@@@@@",datae)
+        // setDatae(datae + 50)
     }, [cartItems])
 
     const addCart = (id, quantity) => {
@@ -61,7 +60,7 @@ const Cart = () => {
 
     return (
         <>
-            <NavBar />
+            <Header />
             <div className="bg-neutral-50 py-12">
                 <Stepper step={step} />
 
@@ -165,7 +164,8 @@ const Cart = () => {
                                         <>
                                             <div className="flex justify-between text-base text-gray-900">
                                                 <p>{data?.data2?.product_title}</p>
-                                                <p className="data123">{data?.data2?.product_price * data?.quantity}</p>
+                                                {console.log("sssssssssssssss",data)}
+                                                <p className="data12345">{data?.data2?.product_price * data?.quantity}</p>
                                             </div>
                                         </>
                                     ))}

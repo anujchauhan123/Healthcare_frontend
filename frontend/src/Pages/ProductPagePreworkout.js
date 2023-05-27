@@ -1,19 +1,21 @@
 
 import Category from "../Components/Category";
+
+import CategoryType from "../Components/CategoryType"
 import Footer from "../Components/Footer";
 import Header from "../Components/Header";
 
 
 
-const ProductPage = () => {
+const ProductPagePreworkout = () => {
    
     return (
         <>
             <Header />
-            <Category />
+            <CategoryType item="Pre/Post Workout" categorys="Pre/Post Workout"/>
             <Footer />
         </>
     )
 }
 
-export default ProductPage;
+export default ProductPagePreworkout;

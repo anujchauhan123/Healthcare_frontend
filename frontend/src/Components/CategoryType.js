@@ -7,7 +7,7 @@ import { Pagination } from "@mui/material";
 import PaginationTo from "./Pagination";
 import { Link } from "react-router-dom";
 import axios from "axios";
-const Category = ({categorys}) => {
+const CategoryType = ({categorys}) => {
 
     console.log("category@@@@@@@@@@@@@@@",categorys)
 
@@ -59,7 +59,7 @@ const Category = ({categorys}) => {
                 console.log(error);
             });
 
-        dispatch(productListAction(1, "ALL", "ALL", "ALL", "NEWEST"))
+        dispatch(productListAction(1, categorys, "ALL", "ALL", "NEWEST"))
     }, [])
     const [category, setCategory] = useState("ALL");
     const [flavour, setFlavour] = useState("ALL");
@@ -259,7 +259,7 @@ const Category = ({categorys}) => {
                     }
                     <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                         <div className="flex items-baseline justify-between border-b border-gray-200 pt-24 pb-6">
-                            <h1 className="text-4xl font-bold tracking-tight text-gray-900">New Arrivals</h1>
+                            <h1 className="text-4xl font-bold tracking-tight text-gray-900">{categorys}</h1>
 
                             <div className="flex items-center">
                                 <div className="relative inline-block text-left">
@@ -309,7 +309,7 @@ const Category = ({categorys}) => {
                                 <form className="hidden lg:block">
                                     <h3 className="sr-only">Categories</h3>
                                     <ul role="list" className="space-y-4 border-b border-gray-200 pb-6 text-sm font-medium text-gray-900">
-                                         <li>
+                                        <li>
                                             <Link to="/products/page/protein">Protein</Link>
                                         </li>
 
@@ -466,4 +466,4 @@ const Category = ({categorys}) => {
     )
 }
 
-export default Category
+export default CategoryType

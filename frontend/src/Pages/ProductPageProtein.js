@@ -1,19 +1,21 @@
 
 import Category from "../Components/Category";
+
+import CategoryType from "../Components/CategoryType"
 import Footer from "../Components/Footer";
 import Header from "../Components/Header";
 
 
 
-const ProductPage = () => {
+const ProductPageProtein = () => {
    
     return (
         <>
             <Header />
-            <Category />
+            <CategoryType item="Protein" categorys="Protein"/>
             <Footer />
         </>
     )
 }
 
-export default ProductPage;
+export default ProductPageProtein;

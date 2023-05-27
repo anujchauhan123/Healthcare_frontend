@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { user_login } from '../Redux/Actions/userLoginAction';
 import { Link, useNavigate } from "react-router-dom";
 import {  PhoneOutlined } from '@mui/icons-material';
-import NavBar from '../Components/Navbar';
+import Header from '../Components/Header';
 import { verifyProduct } from "../Redux/Actions/productAction";
 
 const Verification = () => {
@@ -16,9 +16,9 @@ const Verification = () => {
     const [password,setPassword] = useState("")
     const {userInfo} = userLogin;
     useEffect(()=>{
-        if (localStorage.getItem("userInfo")?.length > 0) {
-            navigate("/");
-        }
+
+
+        
     },[userInfo])
 
     const submithandle=(e)=>{
@@ -30,7 +30,7 @@ const Verification = () => {
 
      return (
         <>
-        <NavBar/>
+        <Header/>
         <section className="h-[100vh] flex items-center py-10 2xl:py-20 bg-[url('https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80')] bg-center bg-cover bg-no-repeat overflow-hidden">  
             <div className="container mx-auto">
                 <div className="m-auto">

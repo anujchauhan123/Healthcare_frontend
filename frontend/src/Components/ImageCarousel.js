@@ -55,7 +55,7 @@ export default function ImageCarousel() {
               // spaceBetween: 40,
             },
             1024: {
-              slidesPerView: 5,
+              slidesPerView: 4,
               // spaceBetween: 50,
             },
           }}
@@ -85,8 +85,8 @@ export default function ImageCarousel() {
         >
           {data.map((item, index) => (
             <SwiperSlide key={index}>
-              <div className="w-28" >
-                <img src={`${item.banner_url}`} />
+              <div className="" style={{width : 250}}>
+                <img src={`${item.banner_url}`} style={{borderRadius: 10}}/>
               </div>
             </SwiperSlide>
           ))}

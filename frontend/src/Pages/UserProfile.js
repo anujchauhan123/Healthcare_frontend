@@ -6,7 +6,7 @@ import { user_details } from "../Redux/Actions/userLoginAction";
 import EditIcon from '@mui/icons-material/Edit';
 import { KeyboardArrowDown } from "@mui/icons-material";
 import { useraddress } from "../Redux/Actions/addressAction";
-import NavBar from "../Components/Navbar";
+import Header from "../Components/Header";
 
 const UserProfile = () => {
     const dispatch = useDispatch();
@@ -28,7 +28,7 @@ const UserProfile = () => {
     
     return (
         <>
-            <NavBar />
+            <Header />
             <div className="bg-neutral-50 -mt-14 py-12">
 
                 <div className="container mx-auto my-12">

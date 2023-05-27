@@ -2,7 +2,7 @@ import { useState } from "react";
 import Footer from "../Components/Footer"
 import axios from "axios";
 import { toast } from "react-toastify";
-import NavBar from "../Components/Navbar";
+import Header from "../Components/Header";
 
 const Contact = () => {
     const [name, setName] = useState("");
@@ -61,7 +61,7 @@ const Contact = () => {
     }
     return (
         <>
-            <NavBar />
+            <Header />
             <section class="relative max-w-screen-xl mx-auto px-10  overflow-hidden bg-white py-20 lg:py-[120px]">
                 <div class="container mx-auto">
                     <div class="-mx-4 flex flex-wrap lg:justify-between">

@@ -8,6 +8,11 @@ import {
 import Cart from './Pages/Cart';
 import Product from './Pages/Product';
 import ProductPage from './Pages/ProductPage';
+
+import ProductPageProtein from './Pages/ProductPageProtein';
+import ProductPageGainer from './Pages/ProductPageGainer';
+import ProductPagePreworkout from './Pages/ProductPagePreworkout';
+
 import Login from './Pages/Login';
 import Register from './Pages/Register';
 import UserProfile from './Pages/UserProfile';
@@ -40,6 +45,10 @@ function App() {
           <Route path="/cart" element={<Cart />} />
           <Route path="/product/:id" element={<Product />} />
           <Route path="/products/page" element={<ProductPage />} />
+
+          <Route path="/products/page/protein" element={<ProductPageProtein />} />
+          <Route path="/products/page/gainer" element={<ProductPageGainer />} />
+          <Route path="/products/page/pre-postworkout" element={<ProductPagePreworkout />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/user/:id" element={<UserProfile />} />
