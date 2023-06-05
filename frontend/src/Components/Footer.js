@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import logo from './ezgif.png';
 
 const Footer = () => {
 
@@ -64,7 +65,7 @@ const Footer = () => {
                             <div class="mb-10 w-full">
                                 <a href="javascript:void(0)" class="mb-6 inline-block max-w-[160px]">
                                     <img
-                                        src="https://res.cloudinary.com/valarmorghullis/image/upload/v1674997358/protienfarm_wezs7k.jpg"
+                                        src={logo}
                                         alt="logo"
                                         class="max-w-full"
                                     />

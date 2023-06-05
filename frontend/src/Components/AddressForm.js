@@ -34,6 +34,8 @@ const AddressForm = ({ }) => {
                 "landmark": landmark,
                 "address": address,
             });
+
+            console.log("dataEEEEEEEEEEEEEEE",data)
             var config = {
                 method: 'post',
                 url: `${process.env.REACT_APP_HOSTNAME}create/order`,
@@ -47,7 +49,7 @@ const AddressForm = ({ }) => {
             axios(config)
                 .then(function (response) {
                     console.log(JSON.stringify(response.data));
-                    navigate("/myOrder")
+                    navigate(`/myOrder/${userDetails.user.message.id}`)
                     dispatch(getCart(token))
                 })
                 .catch(function (error) {

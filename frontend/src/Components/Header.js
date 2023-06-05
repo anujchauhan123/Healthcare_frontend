@@ -7,6 +7,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { useDispatch, useSelector } from 'react-redux';
 import {  user_logout } from '../Redux/Actions/userLoginAction';
 import BottomAppBar from './BottomNavbar';
+import logo from './ezgif.png';
 import SideBar from './SideBar';
 import axios from 'axios';
 import CartModal from './cartModal';
@@ -20,6 +21,13 @@ const Header = () => {
   const [modal, setModal] = useState(false);
   const [flyerTwo, setFlyerTwo] = React.useState(false);
   const [flyer, setFlyer] = React.useState(false);
+
+
+  const [flyerTwo1, setFlyerTwo1] = React.useState(false);
+  const [flyer1, setFlyer1] = React.useState(false);
+
+  const [flyerTwo2, setFlyerTwo2] = React.useState(false);
+  const [flyer2, setFlyer2] = React.useState(false);
 
   const userDetails = useSelector(state => state.userDetails);
   const cartItems = useSelector(state => state.cartItems);
@@ -59,7 +67,8 @@ const Header = () => {
       <div className="bg-white  border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900  sticky top-0 z-[100] shadow-xl">
         <div className="container flex flex-wrap justify-between items-center mx-auto">
           <Link to="/" className="flex items-center">
-            <img className='h-10 w-28' src="https://res.cloudinary.com/valarmorghullis/image/upload/v1674997358/protienfarm_wezs7k.jpg" />
+            <img src={logo} style={{height: 66,
+    width: 333}}/>
           </Link>
           <div className="flex">
             <div className="block relative lg:hidden w-48">
@@ -67,14 +76,14 @@ const Header = () => {
                 <SearchOutlined />
                 <span className="sr-only">Search icon</span>
               </div>
-              <input type="text" value={search} onChange={(e) => { handleChange(e); }} id="search-navbar" className="block p-2 pl-10 lg:w-[400px] w-full text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search..." />
+              <input type="text" value={search} onChange={(e) => { handleChange(e); }} id="search-navbar" className="block p-2 pl-10 lg:w-[600px] w-full text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search..." />
             </div>
             <div className="hidden relative lg:block">
               <div className="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
                 <SearchOutlined />
                 <span className="sr-only">Search icon</span>
               </div>
-              <input type="text" value={search} onChange={(e) => { handleChange(e); }} id="search-navbar" className="block p-2 pl-10 lg:w-[300px] xl:w-[200px] 2xl:w-[400px] w-full text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search..." />
+              <input type="text" value={search} onChange={(e) => { handleChange(e); }} id="search-navbar" className="block p-2 pl-10 lg:w-[300px] xl:w-[500px] 2xl:w-[600px] w-full text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search..." />
             </div>
             <button data-collapse-toggle="navbar-search" type="button" className="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-search" aria-expanded="false">
               <span className="sr-only">Open menu</span>
@@ -169,7 +178,7 @@ const Header = () => {
                               </Link>
                             </li>
                             <li>
-                              <Link to="/myOrder">
+                              <Link to={`/myOrder/${userDetails.user.message.id}`}>
                                 <button type="button" className=" w-full py-2.5 px-5 mr-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Orders</button>
                               </Link>
                             </li>
@@ -236,7 +245,7 @@ const Header = () => {
                     "
                             onClick={() => (setFlyer(!flyer), setFlyerTwo(false))}
                         >
-                            <span>Sort By Category</span>
+                            <span>Protein's</span>
                             {/*
                 Heroicon name: solid/chevron-down
   
@@ -275,12 +284,12 @@ const Header = () => {
                             onMouseLeave={() => setFlyer(false)}
                             className={
                                 flyer
-                                    ? "w-[700px] opacity-100 translate-y-0  transition ease-out duration-200 absolute z-10 -ml-4 mt-3 transform px-2 sm:px-0 lg:ml-0 "
+                                    ? "w-[300px] opacity-100 translate-y-0  transition ease-out duration-200 absolute z-10 -ml-4 mt-3 transform px-2 sm:px-0 lg:ml-0 "
                                     : "w-full opacity-0 hidden translate-y-1  absolute z-10 -ml-4 mt-3 transform px-2 sm:px-0 lg:ml-0 display-none"
                             }
                         >
                             <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
-                                <div className="relative grid grid-cols-3 gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+                                <div className="relative bg-white px-5 py-6 sm:gap-8 sm:p-8">
                                     <a
                                         href="#"
                                         className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
@@ -314,6 +323,70 @@ const Header = () => {
                                            
                                         </div>
                                     </a>
+                                    
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div className="relative">
+                        {/* Item active: "text-gray-900", Item inactive: "text-gray-500" */}
+                        <button
+                            type="button"
+                            className="
+                     group bg-white rounded-md text-gray-500 inline-flex items-center text-base font-medium hover:text-gray-900 pb-8'
+                    "
+                            onClick={() => (setFlyer1(!flyer1), setFlyerTwo1(false))}
+                        >
+                            <span>Gainer's</span>
+                            {/*
+                Heroicon name: solid/chevron-down
+  
+                Item active: "text-gray-600", Item inactive: "text-gray-400"
+              */}
+                            <svg
+                                className={
+                                    flyer1 === true
+                                        ? "transform rotate-180 ml-2 h-5 w-5 text-gray-400 group-hover:text-gray-500 transition ease-out duration-200"
+                                        : "transform rotate-0 transition ease-out duration-200 ml-2 h-5 w-5 text-gray-400 group-hover:text-gray-500"
+                                }
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                                aria-hidden="true"
+                            >
+                                <path
+                                    fillRule="evenodd"
+                                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                    clipRule="evenodd"
+                                />
+                            </svg>
+                        </button>
+                        {/*
+              'Solutions' flyout menu, show/hide based on flyout menu state.
+  
+              Entering: "transition ease-out duration-200"
+                From: "opacity-0 translate-y-1"
+                To: "opacity-100 translate-y-0"
+              Leaving: "transition ease-in duration-150"
+                From: "opacity-100 translate-y-0"
+                To: "opacity-0 translate-y-1"
+            */}
+
+                        <div
+                            onMouseLeave={() => setFlyer1(false)}
+                            className={
+                                flyer1
+                                    ? "w-[300px] opacity-100 translate-y-0  transition ease-out duration-200 absolute z-10 -ml-4 mt-3 transform px-2 sm:px-0 lg:ml-0 "
+                                    : "w-full opacity-0 hidden translate-y-1  absolute z-10 -ml-4 mt-3 transform px-2 sm:px-0 lg:ml-0 display-none"
+                            }
+                        >
+                            <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
+                                <div className="relative  bg-white px-5 py-6 sm:gap-8 sm:p-8">
+                                    
                                     <a
                                         href="#"
                                         className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
@@ -339,6 +412,70 @@ const Header = () => {
                                            
                                         </div>
                                     </a>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div className="relative">
+                        {/* Item active: "text-gray-900", Item inactive: "text-gray-500" */}
+                        <button
+                            type="button"
+                            className="
+                     group bg-white rounded-md text-gray-500 inline-flex items-center text-base font-medium hover:text-gray-900 pb-8'
+                    "
+                            onClick={() => (setFlyer2(!flyer2), setFlyerTwo2(false))}
+                        >
+                            <span>Pre/Post Workout</span>
+                            {/*
+                Heroicon name: solid/chevron-down
+  
+                Item active: "text-gray-600", Item inactive: "text-gray-400"
+              */}
+                            <svg
+                                className={
+                                    flyer2 === true
+                                        ? "transform rotate-180 ml-2 h-5 w-5 text-gray-400 group-hover:text-gray-500 transition ease-out duration-200"
+                                        : "transform rotate-0 transition ease-out duration-200 ml-2 h-5 w-5 text-gray-400 group-hover:text-gray-500"
+                                }
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                                aria-hidden="true"
+                            >
+                                <path
+                                    fillRule="evenodd"
+                                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                    clipRule="evenodd"
+                                />
+                            </svg>
+                        </button>
+                        {/*
+              'Solutions' flyout menu, show/hide based on flyout menu state.
+  
+              Entering: "transition ease-out duration-200"
+                From: "opacity-0 translate-y-1"
+                To: "opacity-100 translate-y-0"
+              Leaving: "transition ease-in duration-150"
+                From: "opacity-100 translate-y-0"
+                To: "opacity-0 translate-y-1"
+            */}
+
+                        <div
+                            onMouseLeave={() => setFlyer2(false)}
+                            className={
+                                flyer2
+                                    ? "w-[300px] opacity-100 translate-y-0  transition ease-out duration-200 absolute z-10 -ml-4 mt-3 transform px-2 sm:px-0 lg:ml-0 "
+                                    : "w-full opacity-0 hidden translate-y-1  absolute z-10 -ml-4 mt-3 transform px-2 sm:px-0 lg:ml-0 display-none"
+                            }
+                        >
+                            <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
+                                <div className="relative  bg-white px-5 py-6 sm:gap-8 sm:p-8">
+                                    
+                                    
                                     <a
                                         href="#"
                                         className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
@@ -422,6 +559,10 @@ const Header = () => {
                             </div>
                         </div>
                     </div>
+
+
+
+
 
                     <a
                         href="/verification"

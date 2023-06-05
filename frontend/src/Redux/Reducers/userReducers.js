@@ -34,6 +34,8 @@ export const userDetailsReducers = (state = {user:{}}, action) => {
         case USER_DETAILS_REQUEST:
             return {...state,loading:true}
         case USER_DETAILS_SUCCESS:
+            console.log("USER_DETAILS_SUCCESS################",USER_DETAILS_SUCCESS)
+            console.log("action.payload####################3",action.payload)
             return { loading: false, user: action.payload }
         case USER_REGISTER_FAIL:
             return { loading: false, error: action.payload }

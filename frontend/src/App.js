@@ -53,7 +53,7 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/user/:id" element={<UserProfile />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/myOrder" element={<Order />} />
+          <Route path="/myOrder/:id" element={<Order />} />
           <Route path="/verification" element={<Verification />} />
         </Routes>
       </BrowserRouter>

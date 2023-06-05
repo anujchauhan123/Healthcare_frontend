@@ -2,21 +2,34 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import Footer from "../Components/Footer";
+import { useDispatch, useSelector } from 'react-redux';
 import moment from "moment";
 import TrackOrder from "../Components/TrackOrder";
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import Header from "../Components/Header";
+import { useNavigate, useParams } from "react-router-dom";
+
 const Order = () => {
     const [data, setData] = useState([])
     const [open, setOpen] = useState(false)
     const [add, setAdd] = useState()
+    const userDetails = useSelector(state => state);
+    const { id } = useParams();
+
     useEffect(() => {
+
+        console.log("FFFFFFFFFFFFFFFFFF",id)
+
+
+        var user = id;
+
+
         var config = {
             method: 'get',
-            url: `${process.env.REACT_APP_HOSTNAME}get/order`,
+            url: `${process.env.REACT_APP_HOSTNAME}get/order/${user}`,
             headers: {
                 'Authorization': `Bearer ${localStorage?.getItem("userInfo")?.split('"')[3]}`
-            }
+            },
         };
 
         axios(config)
