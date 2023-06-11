@@ -45,7 +45,6 @@ function App() {
           <Route path="/cart" element={<Cart />} />
           <Route path="/product/:id" element={<Product />} />
           <Route path="/products/page" element={<ProductPage />} />
-
           <Route path="/products/page/protein" element={<ProductPageProtein />} />
           <Route path="/products/page/gainer" element={<ProductPageGainer />} />
           <Route path="/products/page/pre-postworkout" element={<ProductPagePreworkout />} />

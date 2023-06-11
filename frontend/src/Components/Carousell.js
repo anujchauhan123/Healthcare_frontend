@@ -7,6 +7,8 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ProductCard from './ProductCards';
 const CarouselCards = ({products}) => {
 
+    console.log("products?.products?.message?.[0]?@@@@@@@@@@",products?.products?.message)
+
     var settings = {
         dots: false,
         // infinite: true,
@@ -27,7 +29,7 @@ const CarouselCards = ({products}) => {
                 <div className="flex">
 
 
-                    <h1 className='text-3xl'>{products?.products?.message?.[0]?.product_category}</h1>
+                    <h1 className='text-3xl'>{products?.products?.message?.[0]?.product_type}</h1>
                     {console.log("products@@@@@@@@@@@",products?.products?.message)}
                 </div>
                 <div className="flex gap-2">

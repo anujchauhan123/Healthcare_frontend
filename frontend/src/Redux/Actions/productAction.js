@@ -129,7 +129,7 @@ export const productListWheyProteinAction = (page) => async (dispatch) => {
 
         console.log("PRODUCT_LIST_WheyProtein_REQUESTw@@@@@@@@@@@@@@@@",PRODUCT_LIST_WHEYPROTEIN_REQUEST)
         dispatch({ type: PRODUCT_LIST_WHEYPROTEIN_REQUEST })
-        const { data } = await axios.get(`${process.env.REACT_APP_HOSTNAME}getProductList?page=${page}&category=ISOWHEYPROTEIN&weight=ALL&flavour=ALL&sort=NEWEST`,config)
+        const { data } = await axios.get(`${process.env.REACT_APP_HOSTNAME}getProductList?page=${page}&category=preworkout&weight=ALL&flavour=ALL&sort=NEWEST`,config)
         console.log("data##############kkkkkkkkkkkkkkk",data)
         dispatch({ type: PRODUCT_LIST_WHEYPROTEIN_SUCCESS, payload: data })
     }

@@ -12,7 +12,7 @@ const ProductPagePreworkout = () => {
     return (
         <>
             <Header />
-            <CategoryType item="Pre/Post Workout" categorys="Pre/Post Workout"/>
+            <CategoryType item="Pre/Post Workout" categorys="preworkout"/>
             <Footer />
         </>
     )

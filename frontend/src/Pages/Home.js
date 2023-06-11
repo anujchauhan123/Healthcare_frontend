@@ -38,7 +38,8 @@ const Home = () => {
             {/* <NavBar/> */}
             <Header />
             <Carousel />
-            <CarouselCards item="PROTIEN" products={protienList}/>
+            <CarouselCards item="ISORICH" products={IsoRichList}/>
+            
             <CardCarousel/>
             <CarouselCards item="GAINER" products={gainerList}/>
             <ImageCarousel/>
@@ -47,7 +48,7 @@ const Home = () => {
             
             <CarouselCards item="WHEYPROTEIN" products={WheyProtein}/>
             <BrandCarousel/>
-            <CarouselCards item="ISORICH" products={IsoRichList}/>
+            <CarouselCards item="PROTIEN" products={IsoRichList}/>
             <BottomCarousel/>            
             <Footer />
         </>
