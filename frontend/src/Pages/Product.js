@@ -24,29 +24,62 @@ const Product = () => {
     const productDetails = useSelector((state) => state.productDetail)
 
     // const [data, setData] = useState({});
-    useEffect(() => async () => {
+    useEffect(() => {
+
+        const datae = axios.get(`${process.env.REACT_APP_HOSTNAME}productWeight/${id}`).then(function (response) {
+                // setData(response.data.message);
+            console.log("response@@@@@@@@@@@",response)
+
+            function getUniqueListBy(arr, key) {
+                return [...new Map(arr.map(item => [item[key], item])).values()]
+            }
+
+            setData(getUniqueListBy(response?.data?.message, "product_weight"))
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+        const datae1 = axios.get(`${process.env.REACT_APP_HOSTNAME}productFlavour/${id}`).then(function (response) {
+                // setData(response.data.message);
+            console.log("response@@@@@@@@@@@",response)
+            setFlavour(response?.data?.message)
+
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+
+     console.log("datae@@@@@@@@@@@@@@@",datae)
+     console.log("datae1datae1datae1@@@@@@@@@@@@@@@",datae1)
+
+        console.log("http://localhost:3000@@@@@@@@@@@@@@@",id)
         dispatch(productDetailAction(id))
     }, [])
 
-    useEffect(() => async () => {
-        const datae = await axios.get(`${process.env.REACT_APP_HOSTNAME}productWeight/${id}`)
-        const datae1 = await axios.get(`${process.env.REACT_APP_HOSTNAME}productFlavour/${id}`)
-        function getUniqueListBy(arr, key) {
-            return [...new Map(arr.map(item => [item[key], item])).values()]
-        }
-        setFlavour(datae1?.data?.message)
 
-        setData(getUniqueListBy(datae?.data?.message, "product_weight"))
-    }, [])
+    const handleWeightChange = (product_slug) => {
 
-    const handleWeightChange = async (product_slug) => {
+        console.log("http://localhost:3000@@@@@@@@@@@@@@@",product_slug)
         dispatch(productDetailAction(product_slug))
-        const datae1 = await axios.get(`/productFlavour/${product_slug}`)
-        setFlavour(datae1?.data?.message)
-        setFlavour1(productDetails?.products?.message?.product_flavour)
+        const datae1 = axios.get(`${process.env.REACT_APP_HOSTNAME}productFlavour/${product_slug}`).then(function (response) {
+                // setData(response.data.message);
+            console.log("response@@@@@@@@@@@",response)
+            setFlavour(response?.data?.message)
+            console.log("productDetails?.products?.message############",productDetails?.products?.message.product_flavour)
+            setFlavour1(productDetails?.products?.message?.product_flavour)
+
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+        // setFlavour(datae1?.data?.message)
+        // setFlavour1(productDetails?.products?.message?.product_flavour)
     }
 
     const addToCarte = (quantity) => {
+
+                console.log("http://quantity:3000@@@@@@@@@@@@@@@",quantity)
+                
         const cartButtons = document.querySelectorAll('.cart-button');
 
         cartButtons.forEach(button => {
@@ -59,7 +92,6 @@ const Product = () => {
         }
         const token = localStorage.getItem("userInfo")?.split('"')[3];
         if (token) {
-            console.log(productDetails?.products?.message?.id, quantity, token)
             dispatch(addToCart(productDetails?.products?.message?.id, quantity, token));
         }
         else {
