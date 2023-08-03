@@ -68,7 +68,7 @@ const Header = () => {
         <div className="container flex flex-wrap justify-between items-center mx-auto">
           <Link to="/" className="flex items-center">
             <img src={logo} style={{height: 66,
-    width: 333}}/>
+    width: 250}}/>
           </Link>
           <div className="flex">
             <div className="block relative lg:hidden w-48">

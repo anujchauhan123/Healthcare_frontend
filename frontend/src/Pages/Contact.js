@@ -76,9 +76,10 @@ const Contact = () => {
                                     GET IN TOUCH WITH US
                                 </h2>
                                 <p class="text-body-color mb-9 text-base leading-relaxed">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eius
-                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim adiqua
-                                    minim veniam quis nostrud exercitation ullamco
+                                    You can reach out to us via email or phone with any inquiries, 
+                                    questions, or feedback you may have. We are available 
+                                    during regular business hours and will do 
+                                    our best to respond to your queries promptly.
                                 </p>
                                 <div class="mb-8 flex w-full max-w-[370px]">
                                     <div
@@ -98,7 +99,7 @@ const Contact = () => {
                                     <div class="w-full">
                                         <h4 class="text-dark mb-1 text-xl font-bold">Our Location</h4>
                                         <p class="text-body-color text-base">
-                                            99 S.t Jomblo Park Pekanbaru 28292. Indonesia
+                                            J98G+FRP, B Block, Sector 63, Noida, Uttar Pradesh 201307
                                         </p>
                                     </div>
                                 </div>
@@ -125,7 +126,7 @@ const Contact = () => {
                                     </div>
                                     <div class="w-full">
                                         <h4 class="text-dark mb-1 text-xl font-bold">Phone Number</h4>
-                                        <p class="text-body-color text-base">(+62)81 414 257 9980</p>
+                                        <p class="text-body-color text-base">(+91) 9711828299</p>
                                     </div>
                                 </div>
                                 <div class="mb-8 flex w-full max-w-[370px]">
@@ -145,7 +146,7 @@ const Contact = () => {
                                     </div>
                                     <div class="w-full">
                                         <h4 class="text-dark mb-1 text-xl font-bold">Email Address</h4>
-                                        <p class="text-body-color text-base">info@yourdomain.com</p>
+                                        <p class="text-body-color text-base">info@proteinfarm.in</p>
                                     </div>
                                 </div>
                             </div>
