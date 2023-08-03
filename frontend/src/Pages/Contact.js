@@ -99,7 +99,7 @@ const Contact = () => {
                                     <div class="w-full">
                                         <h4 class="text-dark mb-1 text-xl font-bold">Our Location</h4>
                                         <p class="text-body-color text-base">
-                                            B-53, C Block, Pocket C, Sector 63, Noida, Uttar Pradesh 201301
+                                            B-53, B Block, Sector 63, Noida, Uttar Pradesh 201301
                                         </p>
                                     </div>
                                 </div>
@@ -126,7 +126,8 @@ const Contact = () => {
                                     </div>
                                     <div class="w-full">
                                         <h4 class="text-dark mb-1 text-xl font-bold">Phone Number</h4>
-                                        <p class="text-body-color text-base">(+91) 9711828299</p>
+                                        <p class="text-body-color text-base">(+91) 8527647727<br/>
+                                        (+91) 9711828221</p>
                                     </div>
                                 </div>
                                 <div class="mb-8 flex w-full max-w-[370px]">

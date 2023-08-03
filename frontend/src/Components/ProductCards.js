@@ -47,10 +47,10 @@ const ProductCard = ({ product }) => {
                         </div>
                     </div>
                     <div className="flex">
-                        <h5 className="text-md font-semibold tracking-tight text-gray-900 dark:text-white text-left">{product?.product_title} ({product?.product_weight }</h5>
-                        <h5 className="text-sm tracking-tight font-bold text-gray-900 dark:text-white text-left">{" "+product?.product_flavour})</h5>
+                        <h5 className="text-md tracking-tight text-gray-900 dark:text-white text-left">{product?.product_title} ({product?.product_weight })</h5>
+                        
                     </div>
-                    <h5 className="text-sm tracking-tight text-gray-900 dark:text-white text-left -mt-1">By {product?.product_brand}</h5>
+                    <h5 className="text-sm tracking-tight  text-gray-900 dark:text-white text-left">{" "+product?.product_flavour}</h5>
 
 
 

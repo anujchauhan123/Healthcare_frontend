@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import logo from './ezgif.png';
+import logo from './ezgif1.png';
 
 const Footer = () => {
 
@@ -92,7 +92,7 @@ const Footer = () => {
                                             />
                                         </svg>
                                     </span>
-                                    <span>+91 9711828221</span>
+                                    <span>(+91) 8527647727<br/>(+91) 9711828221</span>
                                 </p>
                             </div>
                         </div>

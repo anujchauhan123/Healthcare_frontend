@@ -7,7 +7,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { useDispatch, useSelector } from 'react-redux';
 import {  user_logout } from '../Redux/Actions/userLoginAction';
 import BottomAppBar from './BottomNavbar';
-import logo from './ezgif.png';
+import logo from './ezgif1.png';
 import SideBar from './SideBar';
 import axios from 'axios';
 import CartModal from './cartModal';
@@ -67,8 +67,8 @@ const Header = () => {
       <div className="bg-white  border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900  sticky top-0 z-[100] shadow-xl">
         <div className="container flex flex-wrap justify-between items-center mx-auto">
           <Link to="/" className="flex items-center">
-            <img src={logo} style={{height: 66,
-    width: 250}}/>
+            <img src={logo} style={{height: 92,
+    width: 167}}/>
           </Link>
           <div className="flex">
             <div className="block relative lg:hidden w-48">
