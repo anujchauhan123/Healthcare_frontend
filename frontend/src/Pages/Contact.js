@@ -99,7 +99,7 @@ const Contact = () => {
                                     <div class="w-full">
                                         <h4 class="text-dark mb-1 text-xl font-bold">Our Location</h4>
                                         <p class="text-body-color text-base">
-                                            J98G+FRP, B Block, Sector 63, Noida, Uttar Pradesh 201307
+                                            B-53, C Block, Pocket C, Sector 63, Noida, Uttar Pradesh 201301
                                         </p>
                                     </div>
                                 </div>

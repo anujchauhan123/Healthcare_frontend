@@ -23,6 +23,7 @@ import { useEffect } from 'react';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Contact from './Pages/Contact';
+import About from './Pages/Aboutus'
 import Order from './Pages/Order';
 import Verification from './Pages/Verification';
 
@@ -52,6 +53,7 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/user/:id" element={<UserProfile />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/About" element={<About />} />
           <Route path="/myOrder/:id" element={<Order />} />
           <Route path="/verification" element={<Verification />} />
         </Routes>
